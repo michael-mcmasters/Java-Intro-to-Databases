@@ -17,6 +17,7 @@ public class AddressBookTest {
         DataBase dataBase = new DataBase();
         addressBook = new AddressBook(dataBase);
 
+        // Adding sample data.
         Person michael = new Person("Michael", "McMasters", "jmcmasters411@gmail.com", 28);
         Person steph = new Person("Steph", "Gar", "stephyG@gmail.com", 28);
         Person peter = new Person("Peter", "Collins", "petercollins@aim.com", 28);
@@ -59,6 +60,7 @@ public class AddressBookTest {
     @Test
     public void getPersonByEmailTest() {
         Person christy = new Person("Chisty", "Tree", "greentreeoaks@gta.com", 40);
+        addressBook.addPerson(christy);
         Person person = addressBook.getPersonByEmail(christy.getEmail());
         Assert.assertEquals(christy, person);
     }
