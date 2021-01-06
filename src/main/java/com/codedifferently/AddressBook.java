@@ -4,6 +4,7 @@ import com.codedifferently.database.DataBase;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class AddressBook {
 
@@ -33,12 +34,11 @@ public class AddressBook {
     }
 
     public Person getPersonByEmail(String emailStr) {
-        for (Person person : people) {
-            if (person.getEmail().equals(emailStr)) {
-                return person;
-            }
-        }
-        return null;
+        Optional<Person> optional = people.stream()
+                .filter(p -> p.getEmail().equals(emailStr))
+                .findFirst();
+
+        return optional.get();
     }
 
     public List<Person> getAllPeople() {
