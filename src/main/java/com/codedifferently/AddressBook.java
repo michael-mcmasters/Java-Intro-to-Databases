@@ -1,14 +1,17 @@
 package com.codedifferently;
 
+import com.codedifferently.database.DataBase;
+
 import java.util.List;
 
 public class AddressBook {
 
     private Person owner;
     private List<Person> people;
+    private DataBase dataBase;
 
-    public AddressBook() {
-
+    public AddressBook(DataBase dataBase) {
+        this.dataBase = dataBase;
     }
 
     public Person getOwner() {

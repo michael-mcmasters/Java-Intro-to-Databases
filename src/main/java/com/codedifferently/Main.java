@@ -9,12 +9,14 @@ import java.util.Scanner;
 public class Main {
 
     private DataBase dataBase;
+    private AddressBook addressBook;
     private static Scanner scanner;
 
     private ArrayList<String> menu;
     public Main() throws DataBaseConnectionException {
         dataBase = new DataBase();
         scanner = new Scanner(System.in);
+        addressBook = new AddressBook(dataBase);
         initMenuOption();
     }
 
