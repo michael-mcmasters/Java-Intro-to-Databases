@@ -15,34 +15,34 @@ public class Person {
     }
 
     public String getFirstName() {
-        return null;
+        return firstName;
     }
 
-    public void setFirstName(String name) {
-
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return null;
+        return lastName;
     }
 
     public void setLastName(String lastName) {  // Param doesn't appear in UML.
-
+        this.lastName = lastName;
     }
 
     public Integer getAge() {
-        return null;
+        return age;
     }
 
     public void setAge(Integer age) {
-
+        this.age = age;
     }
 
     public String getEmail() {
-        return null;
+        return email;
     }
 
     public void setEmail(String email) {
-
+        this.email = email;
     }
 }
